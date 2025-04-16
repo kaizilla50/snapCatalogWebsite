@@ -1,31 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
+<head>
+    <title>Autolog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
-  </head>
-
-  <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
+    <script defer src="scripts.js"></script>
+</head>
+<!--header for carousel part (needs to switch here from main page)-->
+<body>
+    <header class="carousel-header">
+        <nav>
+            <a href=""> Home</a> <!--MAKE IT LINK BACK HOME-->
+        </nav>
     </header>
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
-      </div>
+
+    <video autoplay loop muted playsinline class="background-clip">
+        <source src="assets/drift.mp4" type="video/mp4" />
+    </video>
+    <!--Home Page Category Section-->
+    <div id="category-container">
+        <div class="category-card" style="background-image: url('assets/electricCar.jpg')" onclick="showCategory('electric')">
+            <h2>Electric Cars</h2>
+        </div>
+        <div class="category-card" style="background-image: url('assets/hybridCar.jpg')" onclick="showCategory('hybrid')">
+            <h2>Hybrid Cars</h2>
+        </div>
+        <div class="category-card" style="background-image: url('assets/gasCar.png')" onclick="showCategory('gas')">
+            <h2>Gas Cars</h2>
+        </div>
     </div>
-    <div class="footer">
-      <button onclick="quoteAlert();">Get A Quote!</button>
-      <button onclick="removeLastCard();">Remove A Card!</button>
+    <!--carousel-->
+    <!--ELECTRIC-->
+    <div class="carousel" id="electric-carousel" style="display: none;">
+        <div class="list"></div>
+        <div class="thumbnail"></div>
+        <div class="arrows">
+            <button id="electric-prev"><</button>
+            <button id="electric-next">></button>
+        </div>
+        <div class="time"></div>
     </div>
-  </body>
+
+    <!--HYBRID-->
+    <div class="carousel" id="hybrid-carousel" style="display: none;">
+        <div class="list"></div>
+        <div class="thumbnail"></div>
+        <div class="arrows">
+            <button id="hybrid-prev"><</button>
+            <button id="hybrid-next">></button>
+        </div>
+        <div class="time"></div>
+    </div>
+
+    <!--GAS-->
+    <div class="carousel" id="gas-carousel" style="display: none;">
+        <div class="list"></div>
+        <div class="thumbnail"></div>
+        <div class="arrows">
+            <button id="gas-prev"><</button>
+            <button id="gas-next">></button>
+        </div>
+        <div class="time"></div>
+    </div>
+
+</body>
 </html>
+
+
+
+
+
+
